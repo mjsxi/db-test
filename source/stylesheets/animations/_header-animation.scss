@@ -1,0 +1,13 @@
+@include keyframes(header-fade-in) {
+  0% { 
+    background-position-y: -400%;
+    opacity: 0; 
+  }
+  20% {
+    opacity: 0;
+  }
+  100% { 
+    background-position-y: 50%;
+    opacity: 1; 
+  }
+}

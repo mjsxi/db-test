@@ -1,0 +1,23 @@
+$m: '.m-nav';
+
+#{$m} {
+  float: left;
+  margin-top: 3em;
+  a {
+    color: $white;
+    display: block;
+    margin-bottom: 1em;
+    font-size: .9em;
+    &.active {
+      font-weight: 700;
+    }
+    &:hover {
+      font-weight: 700;
+    }
+  }
+}
+
+#{$m}-image {
+  width: 36px;
+  margin-bottom: 2.5em;
+}

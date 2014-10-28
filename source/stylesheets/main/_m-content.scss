@@ -1,0 +1,29 @@
+$m: '.m-content';
+
+#{$m} {
+
+}
+
+#{$m}__db-why {
+  @extend %clearfix;
+  max-width: calculateRem(990px);
+  margin: 0 auto;
+  .business {
+    display: inline-block;
+    width: 33.33%;
+    float: left;
+    background-color: red;
+  }
+}
+
+#{$m}__db-business {
+
+}
+
+#{$m}__db-video {
+
+}
+
+#{$m}__db-signup {
+
+}

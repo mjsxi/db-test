@@ -1,0 +1,96 @@
+$m: '.m-header';
+
+#{$m} {
+  position: relative;
+  width: 100%;
+  background-color: $db-blue;
+  &:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat-x;
+    background-position: 50%; 
+    z-index: $z-index-1;
+    background-image: image-url('dropbox-for-business-files' + '.png');
+    @include vendor-prefix(animation, header-fade-in 2.5s forwards);
+  }
+}
+
+#{$m}-content {
+  @extend %clearfix;
+  width: 90%;
+  max-width: calculateRem(990px);
+  margin: 0 auto;
+  position: relative;
+  z-index: $z-index-2;
+}
+
+#{$m}-text {
+  padding: 105px 0;
+  margin: 0 auto;
+  width: 50%;
+  color: $white;
+  text-align: center;
+  h1 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    margin-top: .5em;
+  }
+  h2 {
+    line-height: 1.5em;
+    font-size: 1.1em;
+    margin-bottom: 1.75em;
+  }
+  div {
+    margin-bottom: 3.5em;
+  }
+  #{$m}--button {
+    display: block;
+    border-radius: 5px;
+    background-color: $white;
+    max-width: 220px;
+    margin: 0 auto;
+    margin-bottom: .8em;
+    padding: 1em;
+    border: 2px solid;
+    border-color: $db-dark-blue;
+    color: $db-blue;
+    &:hover {
+      border-color: $db-blue;
+      background-color: darken($white,3%);
+    }
+  }
+  span {
+    font-size: .9em;
+    color: lighten($db-blue,30%);
+    a {
+      color: $white;
+      border-bottom: 1px solid;
+      border-color: rgba(255,255,255,.5);
+      &:hover {
+        border-color: rgba(255,255,255,1);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

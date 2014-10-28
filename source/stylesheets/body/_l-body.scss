@@ -1,0 +1,11 @@
+$l: '.l-body';
+
+#{$l} {
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-family: $default-font;
+}
+
+#{$l}--container {
+  width: 100%;
+}

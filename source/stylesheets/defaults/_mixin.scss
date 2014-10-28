@@ -1,0 +1,35 @@
+// used to for vendor prefixed css
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+     -moz-#{$name}: #{$argument};
+      -ms-#{$name}: #{$argument};
+       -o-#{$name}: #{$argument};
+          #{$name}: #{$argument};
+}
+
+// used for value prefix css
+@mixin value-prefix($name, $argument) {
+  #{$name}: -webkit-#{$argument};
+  #{$name}:    -moz-#{$argument};
+  #{$name}:     -ms-#{$argument};
+  #{$name}:      -o-#{$argument};
+  #{$name}:         #{$argument};
+}
+
+// easy animation keyframes
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} { @content };
+  @-moz-keyframes #{$name}    { @content };
+  @-ms-keyframes #{$name}     { @content };
+  @-o-keyframes #{$name}      { @content };  
+  @keyframes #{$name}         { @content };
+}
+
+//extend for clearfix
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
