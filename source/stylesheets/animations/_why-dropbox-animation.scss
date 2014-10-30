@@ -1,13 +1,15 @@
 @include keyframes(why-fade-in) {
   0% { 
-    @include vendor-prefix(transform, translateX(-100px));
+    @include vendor-prefix(transform, translateX(-150px));
     opacity: 0; 
   }
   10% {
+    @include vendor-prefix(filter, blur(10px));
     opacity: 0;
   }
   60% {
     @include vendor-prefix(transform, translateX(20px));
+    @include vendor-prefix(filter, blur(0px));
   }
   100% { 
     @include vendor-prefix(transform, translateX(0px));

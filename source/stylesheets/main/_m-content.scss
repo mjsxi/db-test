@@ -20,11 +20,24 @@ $m: '.m-content';
   }
   .business {
     display: inline-block;
-    width: 33.33%;
     float: left;
-    padding: .65em;
     margin-bottom: 3em;
     opacity: 0;
+    @media(max-width: $break_medium) {
+      opacity: 1;
+    }
+    &:nth-child(3){
+      margin-right: 30px;
+      margin-left: 30px;
+      @media(max-width: $break_medium) {
+        margin-right: 0px;
+        margin-left: 0px;
+      }
+    }
+    @media(max-width: $break_medium) {
+      width: 33.33%;
+      padding: .65em;
+    }
     @media(max-width: $break_medium_small) {
       display: block;
       width: 100%;
@@ -51,15 +64,17 @@ $m: '.m-content';
     }
   }
   .active {
-    @include vendor-prefix(animation, why-fade-in 2s forwards);
-    &:nth-child(2) {
-      @include vendor-prefix(animation-delay, .1s);
-    }
-    &:nth-child(3) {
-      @include vendor-prefix(animation-delay, .3s);
-    }
-    &:nth-child(4) {
-      @include vendor-prefix(animation-delay, .5s);
+    @media(min-width: $break_medium) {
+      @include vendor-prefix(animation, why-fade-in 1.25s forwards);
+      &:nth-child(2) {
+        @include vendor-prefix(animation-delay, .1s);
+      }
+      &:nth-child(3) {
+        @include vendor-prefix(animation-delay, .3s);
+      }
+      &:nth-child(4) {
+        @include vendor-prefix(animation-delay, .5s);
+      }
     }
   }
   .db-why--button {
@@ -158,7 +173,6 @@ $m: '.m-content';
   .imagecarousel-image {
     text-align: center;
     overflow: hidden;
-    max-width: 700px;
     margin: 0 auto;
   }
 
@@ -185,9 +199,17 @@ $m: '.m-content';
 #{$m}__db-video {
   .video-container {
     margin-bottom: 1em;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: image_url('video-still.jpg');
   }
   .video-player {
     position: relative;
+    min-height: 500px;
+    @media(max-width: $break_medium_small) {
+      min-height: 250px;
+    }
   }
   .video-player-play {
     position: absolute;
@@ -197,7 +219,7 @@ $m: '.m-content';
     margin-top: -50px;
     margin-left: -50px;
     cursor: pointer;
-    @media(max-width: $break_small) {
+    @media(max-width: $break_medium_small) {
       width: 60px;
       margin-top: -30px;
       margin-left: -30px;
@@ -207,6 +229,10 @@ $m: '.m-content';
     position: absolute;
     top: 0px;
     width: 100%;
+    height: 500px;
+    @media(max-width: $break_medium_small) {
+      height: 250px;
+    }
   }
 }
 

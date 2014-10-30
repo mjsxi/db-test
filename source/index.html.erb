@@ -4,7 +4,7 @@ title: Dropbox for Business
 
 <%# START OF HEADER %>
 <header class="m-header">
-  <div class="m-header-content">
+  <div class="m-header-content twelve-column">
     <%= partial "partials/_nav" %>
     <div class="m-header-text">
       <h1>Get your team in sync</h1>
@@ -22,19 +22,19 @@ title: Dropbox for Business
 <section class="m-content">
 
   <%# START OF DB WHY %>
-  <div class="m-content__db-why">
+  <div class="m-content__db-why twelve-column">
     <h2>Why Dropbox for Business?</h2>
-    <article class="business">
+    <article class="business four-column">
       <%= image_tag 'dropbox-for-business-why-devices.png' %>
       <h3>The power to do more</h3>
       <p>Watch productivity soar with the tool loved by over 300 million users. Let team members instantly sync and share data on any device, so they can work together from anywhere.</p>
     </article>
-    <article class="business">
+    <article class="business four-column">
       <%= image_tag 'dropbox-for-business-why-watch.png' %>
       <h3>Security inspires confidence</h3>
       <p>Dropbox for Business makes data access safe, reliable, and fast. And with powerful admin controls, IT can protect information both inside and outside your organization.</p>
     </article>
-    <article class="business">
+    <article class="business four-column">
       <%= image_tag 'dropbox-for-business-why-key.png' %>
       <h3>A smarter investment</h3>
       <p>Break the cycle of training sessions, support tickets, and lost productivity. Employees will pick up Dropbox for Business in no time, freeing IT, and your team, to get work done.</p>
@@ -45,27 +45,28 @@ title: Dropbox for Business
   <%# START OF DB WHY %>
 
   <%# START OF DB BUSINESS %>
-  <div class="m-content__db-business">
+  <%# Made image gallery bigger  %>
+  <div class="m-content__db-business twelve-column">
     <h2>What can Dropbox for Business do for your team?</h2>
     <div class="imagecarousel-container">
       <ul class="imagecarousel-blocks">
         <li>
           <div class="imagecarousel-block">
-            <div class="imagecarousel-image">
+            <div class="imagecarousel-image nine-column">
               <%= image_tag 'bcbg.jpg' %>
             </div>
           </div>
         </li>
         <li>
           <div class="imagecarousel-block">
-            <div class="imagecarousel-image">
+            <div class="imagecarousel-image nine-column">
               <%= image_tag 'asana.jpg' %>
             </div>
           </div>
         </li>
         <li>
           <div class="imagecarousel-block">
-            <div class="imagecarousel-image">
+            <div class="imagecarousel-image nine-column">
               <%= image_tag 'centric.jpg' %>
             </div>
           </div>
@@ -92,7 +93,6 @@ title: Dropbox for Business
   <div class="m-content__db-video">
     <div class="video-container">
       <div class="video-player" data-url="//www.youtube.com/embed/ai13S1pmkfQ?autoplay=1">
-        <%= image_tag 'video-still.jpg' %>
         <div class="video-player-play">
           <%= image_tag 'player_large.png' %>
         </div>
@@ -102,7 +102,7 @@ title: Dropbox for Business
   <%# START OF DB VIDEO %>
 
   <%# START OF DB SIGNUP %>
-  <div class="m-content__db-signup">
+  <div class="m-content__db-signup twelve-column">
     <h2>Get your team in sync</h2>
     <div>
       <%= link_to 'Try it free', '#', :class => "m-signup--button" %>
@@ -117,7 +117,7 @@ title: Dropbox for Business
 
 <%# START OF FOOTER %>
 <footer class="m-footer">
-  <div class="m-footer-nav">
+  <div class="m-footer-nav twelve-column">
     <nav>
       <ul>
         <li>Business</li>
