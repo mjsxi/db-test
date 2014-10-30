@@ -3,7 +3,7 @@ title: Dropbox for Business
 ---
 
 <%# START OF HEADER %>
-<section class="m-header">
+<header class="m-header">
   <div class="m-header-content">
     <%= partial "partials/_nav" %>
     <div class="m-header-text">
@@ -15,41 +15,145 @@ title: Dropbox for Business
       </div>
     </div>
   </div>
-</section>
+</header>
 <%# END OF HEADER %>
 
 <%# START OF CONTENT %>
 <section class="m-content">
+
+  <%# START OF DB WHY %>
   <div class="m-content__db-why">
+    <h2>Why Dropbox for Business?</h2>
     <article class="business">
-      <h2>The power to do more</h2>
-      <p></p>
+      <%= image_tag 'dropbox-for-business-why-devices.png' %>
+      <h3>The power to do more</h3>
+      <p>Watch productivity soar with the tool loved by over 300 million users. Let team members instantly sync and share data on any device, so they can work together from anywhere.</p>
     </article>
     <article class="business">
-      <h2>Security inspires confidence</h2>
-      <p></p>
+      <%= image_tag 'dropbox-for-business-why-watch.png' %>
+      <h3>Security inspires confidence</h3>
+      <p>Dropbox for Business makes data access safe, reliable, and fast. And with powerful admin controls, IT can protect information both inside and outside your organization.</p>
     </article>
     <article class="business">
-      <h2>A smarter investment</h2>
-      <p></p>
+      <%= image_tag 'dropbox-for-business-why-key.png' %>
+      <h3>A smarter investment</h3>
+      <p>Break the cycle of training sessions, support tickets, and lost productivity. Employees will pick up Dropbox for Business in no time, freeing IT, and your team, to get work done.</p>
     </article>
+    <%= link_to 'Learn more', '#', :class => "db-why--button" %>
+    <hr />
   </div>
+  <%# START OF DB WHY %>
+
+  <%# START OF DB BUSINESS %>
   <div class="m-content__db-business">
-    
+    <h2>What can Dropbox for Business do for your team?</h2>
+    <div class="imagecarousel-container">
+      <ul class="imagecarousel-blocks">
+        <li>
+          <div class="imagecarousel-block">
+            <div class="imagecarousel-image">
+              <%= image_tag 'bcbg.jpg' %>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="imagecarousel-block">
+            <div class="imagecarousel-image">
+              <%= image_tag 'asana.jpg' %>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="imagecarousel-block">
+            <div class="imagecarousel-image">
+              <%= image_tag 'centric.jpg' %>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="imagecarousel">
+        <li class="imagecarousel-active first"></li>
+        <li></li>
+        <li class="last"></li>
+      </ul>
+      <a class="imagecarousel-prev">
+        <%= image_tag 'arrow-left.png' %>
+      </a>
+      <a class="imagecarousel-next">
+        <%= image_tag 'arrow-right.png' %>
+      </a>
+    </div>
+    <p>From empowering mobile teams to making sure you never lose a file, Dropbox for Business is designed to help your team work smarter.</p>
+    <%= link_to 'Learn more', '#', :class => "db-business--button" %>
   </div>
+  <%# START OF DB BUSINESS %>
+
+  <%# START OF DB VIDEO %>
   <div class="m-content__db-video">
-    
+    <div class="video-container">
+      <div class="video-player" data-url="//www.youtube.com/embed/ai13S1pmkfQ?autoplay=1">
+        <%= image_tag 'video-still.jpg' %>
+        <div class="video-player-play"></div>
+      </div>
+    </div>
   </div>
+  <%# START OF DB VIDEO %>
+
+  <%# START OF DB SIGNUP %>
   <div class="m-content__db-signup">
-    
+    <h2>Get your team in sync</h2>
+    <div>
+      <%= link_to 'Try it free', '#', :class => "m-signup--button" %>
+      <span>or <%= link_to 'buy for $15 &#47; user &#47; month', '' %></span>
+    </div>
+    <hr />
   </div>
+  <%# START OF DB SIGNUP %>
+
 </section>
 <%# END OF CONTENT %>
 
 <%# START OF FOOTER %>
-<section class="m-footer">
+<footer class="m-footer">
   <div class="m-footer-nav">
-    
+    <nav>
+      <ul>
+        <li>Business</li>
+        <li><%= link_to 'Home', '#' %></li>
+        <li><%= link_to 'Desktop client', '#' %></li>
+        <li><%= link_to 'Mobile', '#' %></li>
+        <li><%= link_to 'Pricing', '#' %></li>
+        <li><%= link_to 'Security', '#' %></li>
+      </ul>
+      <ul>
+        <li>Resources</li>
+        <li><%= link_to 'Blog', '#' %></li>
+        <li><%= link_to 'Partners', '#' %></li>
+        <li><%= link_to 'Press', '#' %></li>
+        <li><%= link_to 'FAQs', '#' %></li>
+        <li><%= link_to 'Buy', '#' %></li>
+      </ul>
+      <ul>
+        <li>Support</li>
+        <li><%= link_to 'Help Center', '#' %></li>
+        <li><%= link_to 'Contact us', '#' %></li>
+        <li><%= link_to 'Support', '#' %></li>
+        <li><%= link_to 'Privacy &amp; terms', '#' %></li>
+      </ul>
+      <ul>
+        <li>Community</li>
+        <li><%= link_to 'Developers', '#' %></li>
+        <li><%= link_to 'Referrals', '#' %></li>
+        <li><%= link_to 'Integrations', '#' %></li>
+      </ul>
+      <ul>
+        <li>Connect</li>
+        <li><%= link_to 'Twitter', '#' %></li>
+        <li><%= link_to 'Facebook', '#' %></li>
+        <li><%= link_to 'Google', '#' %></li>
+        <li><%= link_to 'Youtube', '#' %></li>
+      </ul>
+    </nav>
   </div>
-</section>
+</footer>
 <%# END OF FOOTER %>

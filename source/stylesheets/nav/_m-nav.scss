@@ -15,6 +15,9 @@ $m: '.m-nav';
       font-weight: 700;
     }
   }
+  @media(max-width: $break-medium_small) {
+    display: none;
+  }
 }
 
 #{$m}-image {

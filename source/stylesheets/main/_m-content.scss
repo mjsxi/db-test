@@ -8,22 +8,241 @@ $m: '.m-content';
   @extend %clearfix;
   max-width: calculateRem(990px);
   margin: 0 auto;
+  color: $db-grey;
+  padding-top: 4em;
+  text-align: center;
+  h2 {
+    font-size: 1.25em;
+    margin-bottom: 3em;
+    max-width: 280px;
+    margin: 0 auto;
+    line-height: 1.5em;
+  }
   .business {
     display: inline-block;
     width: 33.33%;
     float: left;
-    background-color: red;
+    padding: .65em;
+    margin-bottom: 3em;
+    opacity: 0;
+    @media(max-width: $break_medium_small) {
+      display: block;
+      width: 100%;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+    img {
+      max-width: 200px;
+      display: block;
+      margin: 1em auto 3em;
+      transition: all .3s;
+      &:hover {
+        @include vendor-prefix(transform, scale(1.1));
+      }
+    }
+    h3 {
+      text-align: center;
+      font-size: 1em;
+      margin-bottom: 2em;
+    } 
+    p {
+      font-size: .9em;
+      line-height: 1.75em;
+    }
+  }
+  .active {
+    @include vendor-prefix(animation, why-fade-in 2s forwards);
+    &:nth-child(2) {
+      @include vendor-prefix(animation-delay, .1s);
+    }
+    &:nth-child(3) {
+      @include vendor-prefix(animation-delay, .3s);
+    }
+    &:nth-child(4) {
+      @include vendor-prefix(animation-delay, .5s);
+    }
+  }
+  .db-why--button {
+    @extend %btn;
+  }
+  hr {
+    border: 0;
+    border-bottom: 1px solid;
+    border-color: lighten($db-grey,50%);
+    margin-top: 3em;
   }
 }
 
 #{$m}__db-business {
+  @extend %clearfix;
+  max-width: calculateRem(990px);
+  margin: 0 auto;
+  color: $db-grey;
+  padding-top: 4em;
+  text-align: center;
+  h2 {
+    font-size: 1.25em;
+    margin-bottom: 3em;
+    max-width: 280px;
+    margin: 0 auto;
+    line-height: 1.5em;
+  }
 
+  // Begining of Image Carousel CSS
+
+  .hide-tab, 
+  %hide-tab {
+    @media(max-width: $break-medium) {
+      display: block;
+    }
+  }
+  %imagecarousel-arrows {
+    cursor: pointer;
+    display: block;
+    bottom: 50%;
+    width: 15px;
+    position: absolute;
+    @media(max-width: $break_medium_small) {
+      bottom: 0;
+    }
+  }
+  .imagecarousel-prev {
+    @extend %imagecarousel-arrows;
+    left: 30px;
+  }
+  .imagecarousel-next {
+    @extend %imagecarousel-arrows;
+    right: 30px;
+  }
+  .title-center {
+    text-align: center;
+  }
+  .imagecarousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 3em;
+  }
+  .imagecarousel-blocks {
+    @extend %clearfix;
+    margin: 5% 0px 2% 0px;
+    width: 900%;
+    li {
+      float: left;
+      width: 11.11111%;
+    }
+  }
+  .imagecarousel-block {
+    @extend %clearfix;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .imagecarousel {
+    @extend %hide-tab;
+    text-align: center;
+    li {
+      cursor: pointer;
+      border-radius: 20px;
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background: $db-blue;
+      margin: 5px;
+      line-height: 4;
+    }
+  }
+  .imagecarousel-active {
+    background: lighten($db-grey,30%) !important;
+  }
+  .imagecarousel-image {
+    text-align: center;
+    overflow: hidden;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  // End of Image Carousel CSS
+
+  p {
+    width: 33.33%;
+    margin: 0 auto;
+    margin-bottom: 3em;
+    font-size: .9em;
+    line-height: 1.75em;
+    @media(max-width: $break_medium_small) {
+      width: 100%;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+  }
+  .db-business--button {
+    @extend %btn;
+    margin-bottom: 4em;
+  }
 }
 
 #{$m}__db-video {
-
+  .video-container {
+    margin-bottom: 1em;
+  }
+  .video-player {
+    position: relative;
+  }
+  iframe {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+  }
 }
 
 #{$m}__db-signup {
-
+  @extend %clearfix;
+  max-width: calculateRem(990px);
+  margin: 0 auto;
+  color: $db-grey;
+  padding-top: 3em;
+  text-align: center;
+  h2 {
+    font-size: 1.25em;
+    max-width: 280px;
+    margin: 0 auto;
+    line-height: 1.5em;
+    padding-bottom: 1.5em;
+  }
+  .m-signup--button {
+    display: block;
+    border-radius: 3px;
+    background-color: $db-blue;
+    max-width: 220px;
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    color: $white;
+    box-shadow: 0px 1px 5px lighten($db-grey,20%);
+    &:hover {
+      background-color: lighten($db-blue,5%);
+    }
+  }
+  div {
+    margin-bottom: 5em;
+  }
+  span {
+    font-size: .9em;
+    color: $db-grey;
+    a {
+      color: $db-grey;
+      &:hover {
+        color: lighten($db-grey,20%);
+      }
+    }
+  }
+  hr {
+    border: 0;
+    border-bottom: 1px solid;
+    border-color: lighten($db-grey,50%);
+    @media(max-width: $break_medium) {
+      display: none;
+    }
+  }
 }

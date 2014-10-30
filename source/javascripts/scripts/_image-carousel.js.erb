@@ -1,0 +1,35 @@
+function showImageCarouselBlock() {
+  var listNumber = $('.imagecarousel li').index(this);
+  var left = listNumber * -100;
+  $('.imagecarousel-blocks').animate({ marginLeft: left + '%'}, 300);
+  $(".imagecarousel li").removeClass("imagecarousel-active");
+  $(this).addClass('imagecarousel-active');
+};
+
+function nextImageCarousel () {
+  if ($('.imagecarousel-active').hasClass("last")) {
+    $('.imagecarousel-active').removeClass('imagecarousel-active');
+    $('.first').addClass('imagecarousel-active');
+    $('.imagecarousel-blocks').animate({ marginLeft: "0"}, 300);
+  }
+  else {
+    $('.imagecarousel-blocks').animate({ marginLeft: "+=-100%"}, 300);
+    $('.imagecarousel-active').removeClass('imagecarousel-active').next().addClass('imagecarousel-active');
+  }
+};
+
+function prevImageCarousel () {
+  if ($('.imagecarousel-active').hasClass("first")) {
+    $('.imagecarousel-active').removeClass('imagecarousel-active');
+    $('.last').addClass('imagecarousel-active');
+    $('.imagecarousel-blocks').animate({ marginLeft: "-200%"}, 300);
+  }
+  else {
+    $('.imagecarousel-active').removeClass('imagecarousel-active').prev().addClass('imagecarousel-active');
+    $('.imagecarousel-blocks').animate({ marginLeft: "+=100%"}, 300);
+  }
+};
+
+$('.imagecarousel li').on('click', showImageCarouselBlock);
+$('.imagecarousel-prev').on('click', prevImageCarousel);
+$('.imagecarousel-next').on('click', nextImageCarousel);

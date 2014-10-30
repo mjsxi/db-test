@@ -33,3 +33,19 @@
     clear: both;
   }
 }
+
+//button 
+
+%btn {
+  border-radius: 3px;
+  background-color: $white;
+  padding: .65em 1.25em;
+  font-size: .8em;
+  border: 1px solid;
+  border-color: $db-blue;
+  color: $db-blue;
+  display: inline-block;
+  &:hover {
+    background-color: lighten($db-blue,50%);
+  }
+}

@@ -1,5 +1,42 @@
 $m: '.m-footer';
 
 #{$m} {
+  @media(max-width: $break_medium) {
+    display: none;
+  }
+}
 
+#{$m}-nav {
+  width: 90%;
+  max-width: calculateRem(990px);
+  margin: 0 auto;
+  position: relative;
+  margin-top: 4em;
+  color: $db-grey;
+  nav {
+    @extend %clearfix;
+    display: block;
+    font-size: .9em;
+    margin-bottom: 5em;
+  }
+  ul {
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0 30px 0 0;
+    width: 155px;
+    li {
+      margin-bottom: 1em;
+      line-height: .95em;
+      &:first-child {
+        font-weight: 600;
+      }
+    }
+  }
+  a {
+    color: $db-grey;
+    &:hover {
+      color: lighten($db-grey,20%);
+    }
+  }
 }
